@@ -10,14 +10,14 @@ class PhoneManager extends AbstractManager
     public function insertPhone(array $phone): int
     {
         $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE .
-         " (`brand`, `model`, `description`, `place`, NOW(), `is_functional`, `user_id`,)
-         VALUES (:brand, :model, :description, :place, :created_at, :is_functional, :user_id )");
+         " (`created_at`, `brand`, `model`, `description`, `is_functional`, `place`, `user_id`,)
+         VALUES (NOW(), :brand, :model, :description, :is_functional, :place, :user_id )");
         $statement->bindValue('brand', $phone['brand'], \PDO::PARAM_STR);
-        $statement->bindValue(':model', $phone['model'], \PDO::PARAM_STR);
-        $statement->bindValue(':place', $phone['place'], \PDO::PARAM_STR);
-        $statement->bindValue(':description', $phone['description'], \PDO::PARAM_STR);
-        $statement->bindValue(':is_functional', $phone['isfunc'], \PDO::PARAM_BOOL);
-        $statement->bindValue(':user_id', $phone['user_id'], \PDO::PARAM_INT);
+        $statement->bindValue('model', $phone['model'], \PDO::PARAM_STR);
+        $statement->bindValue('description', $phone['description'], \PDO::PARAM_STR);
+        $statement->bindValue('is_functional', $phone['isfunc'], \PDO::PARAM_BOOL);
+        $statement->bindValue('place', $phone['place'], \PDO::PARAM_STR);
+        $statement->bindValue('user_id', $phone['user_id'], \PDO::PARAM_INT);
 
         $statement->execute();
         return (int)$this->pdo->lastInsertId();

@@ -91,13 +91,14 @@ class UserController extends AbstractController
             if (empty($credentials["place"])) {
                 $errors[] = "Le lieu de récupération est obligatoire";
             }
-            if (empty($credentials["description"])) {
-                $errors[] = "Merci de renseigner une déscription";
-            }
-            if (strlen($credentials['description']) < 20) {
-                $errors['password'] = "Merci de faire une déscription exhaustive";
-            }
+            // if (empty($credentials["description"])) {
+            //     $errors[] = "Merci de renseigner une déscription";
+            // }
+            // if (strlen($credentials['description']) < 20) {
+            //     $errors['password'] = "Merci de faire une déscription exhaustive";
+            // }
             if (empty($errors)) {
+                
                 $phoneManager = new PhoneManager();
                 $phoneManager->insertPhone($credentials);
                 return $this->login("/");
