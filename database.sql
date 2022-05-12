@@ -62,6 +62,7 @@ ALTER TABLE `item`
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
+<<<<<<< HEAD
 CREATE TABLE `user` (
 	`id` INT NOT NULL AUTO_INCREMENT,
 	`pseudo` VARCHAR(255) NOT NULL,
@@ -298,3 +299,19 @@ INSERT INTO `devices` VALUES (1, '9ff118f1352e19ee1d356e5af65662a7', 1, 'Nokia 3
 
 
 SET FOREIGN_KEY_CHECKS = 1;
+=======
+
+CREATE TABLE `user` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nom` varchar(80) NOT NULL,
+  `prenom` varchar(80) NOT NULL,
+  `adresse` varchar(80) NOT NULL,
+    `pseudo` varchar(80) NOT NULL,
+  `ville` varchar(80) NOT NULL,
+  `cp` int NOT NULL,
+  `tel` int NOT NULL,
+  `email` VARCHAR(100) NOT NULL,
+  `password` VARCHAR(255) NOT NULL,
+  PRIMARY KEY(`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+>>>>>>> 231a685d02b89d6b16fcb17df7178bd041667621

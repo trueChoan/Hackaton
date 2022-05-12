@@ -25,5 +25,9 @@ abstract class AbstractController
             ]
         );
         $this->twig->addExtension(new DebugExtension());
+
+        $user = $_SESSION['user'] ?? null;
+
+        $this->twig->addGlobal('user', $user);
     }
 }
