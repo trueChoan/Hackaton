@@ -1,13 +1,12 @@
 :root {
-/*Noir*/
---bg-primary: 10, 14, 9;
---bg-primary-rgb: rgb(var(--bg-primary));
+    /*Noir*/
+    --bg-primary: 10, 14, 9;
+    --bg-primary-rgb: rgb(var(--bg-primary));
 
-/*vert*/
---bg-secondary: 110, 191, 60;
---bg-secondary-rgb: rgb(var(--bg-secondary));
+    /*vert*/
+    --bg-secondary: 110, 191, 60;
+    --bg-secondary-rgb: rgb(var(--bg-secondary));
 
-/*White*/
---background-primary: 255, 255, 255;
---background-primary-rgb: rgb(var(--background-primary));
-}
+    /*White*/
+    --background-primary: 255, 255, 255;
+    --background-primary-rgb: rgb(var(--background-primary));
