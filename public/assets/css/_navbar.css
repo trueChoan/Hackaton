@@ -11,6 +11,7 @@
     width: 2rem;
 }
 
-.bg-light {
-    background-color: #6EBF3C;
+.logoimg {
+    width: 50px;
+    border-radius: 50%;
 }
