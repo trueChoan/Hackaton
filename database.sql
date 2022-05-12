@@ -68,6 +68,8 @@ CREATE TABLE `user` (
   `nom` varchar(80) NOT NULL,
   `prenom` varchar(80) NOT NULL,
   `adresse` varchar(80) NOT NULL,
+    `pseudo` varchar(80) NOT NULL,
+  `ville` varchar(80) NOT NULL,
   `cp` int NOT NULL,
   `tel` int NOT NULL,
   `email` VARCHAR(100) NOT NULL,

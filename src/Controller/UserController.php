@@ -43,7 +43,7 @@ class UserController extends AbstractController
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // 1. vérifier que le pseudo et l'email $credentials['nickname'] est disponible/valide
-            if (!empty($_POST['nickname']) && !empty($_POST['email'])) {
+            if (!empty($_POST['pseudo']) && !empty($_POST['email'])) {
                 $credentials =  array_map('trim', $_POST);
 
                 $userManager = new UserManager();

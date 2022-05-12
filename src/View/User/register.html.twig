@@ -1,27 +1,24 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <div class="row mt-5 mb-5">
-        <div class="col-md-8 offset-md-2">
-            <div class="bg-warning p-3 mb-4" role="alert" aria-live="polite" aria-labelledby="alert-message">
-                <h6 id="alert-message">
-                    Merci de corriger les erreurs ci-dessous svp : 
-                </h6>
-                <ul class="list-unstyled p-0">
-                    {% for error in errors %}
-                        <li>
-                            {{ error }}
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
 
-            {% include 'user/_form-register.html.twig' with {'formId': 'form-register-page'} %}
+	<div class="row mt-5 mb-5">
+		<div class="col-md-8 offset-md-2">
+			<div class=" p-3 mb-4" role="alert" aria-live="polite" aria-labelledby="alert-message">
+				<ul class="bg-warning list-unstyled p-0">
+					{% for error in errors %}
+						<li>
+							{{ error }}
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
 
-            <button type="submit" form="form-register-page" class="btn btn-success">
-                Create account
-            </button>
-        </div>
-    </div>
+			{% include 'user/_form-register.html.twig' with {'formId': 'form-register-page'} %}
+
+
+		</div>
+	</div>
+
 
 {% endblock %}
