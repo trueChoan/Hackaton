@@ -1,0 +1,26 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+    <div class="col-md-8 offset-md-2">
+        <div class="bg-warning p-3 mb-5" role="alert" aria-live="polite" aria-labelledby="alert-message">
+            <h6 id="alert-message">
+                Merci de corriger les erreurs ci-dessous svp :
+            </h6>
+            <ul class="list-unstyled p-0">
+                {% for error in errors %}
+                    <li>
+                        {{ error }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        {% include 'user/_form-login.html.twig' with {'formId': 'form-login-page'} %}
+
+        <button type="submit" form="form-login-page" class="btn btn-success">
+            Connect
+        </button>
+    </div>
+
+{% endblock %}
