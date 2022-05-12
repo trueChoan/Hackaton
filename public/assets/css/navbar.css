@@ -10,3 +10,8 @@
 .icon-width {
     width: 2rem;
 }
+
+.logoimg {
+    width: 50px;
+    border-radius: 50%;
+}
