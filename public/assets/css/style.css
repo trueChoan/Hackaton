@@ -1,18 +1,10 @@
-@import './navbar.css';
-@import './user.css';
-@import './home.css';
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap');
+@import './_navbar.css';
+@import './_user.css';
+@import './_home.css';
+@import './_var.css';
+@import './_footer.css';
+@import './_global.css';
+@import './_home.css';
 
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
