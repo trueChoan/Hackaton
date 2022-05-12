@@ -12,6 +12,24 @@
 }
 
 .logoimg {
-    width: 50px;
-    border-radius: 50%;
+    width: 60px;
 }
+
+.nav-link
+{
+color:var(--bg-secondary-rgb);
+}
+
+
+.nav-link:focus {
+color:grey;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+
+
+
+
