@@ -10,6 +10,7 @@ return [
     '' => ['HomeController', 'index',],
     'login' => ['UserController', 'login',],
     'register' => ['UserController', 'register',],
+    'logout' => ['UserController', 'logout',],
     'items' => ['ItemController', 'index',],
     'items/edit' => ['ItemController', 'edit', ['id']],
     'items/show' => ['ItemController', 'show', ['id']],
