@@ -6,18 +6,3 @@
 @import './_footer.css';
 @import './_global.css';
 @import './_home.css';
-
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
