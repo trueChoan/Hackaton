@@ -11,3 +11,8 @@ body {
     flex-direction: column;
     height: 100vh;
 }
+
+a {
+    color: var(--bg-secondary-rgb);
+    text-decoration: none;
+  }
