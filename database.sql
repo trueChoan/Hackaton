@@ -83,7 +83,8 @@ CREATE TABLE `donation` (
 	`description` TEXT NOT NULL,
 	`created_at` DATETIME,
 	`is_functional` BIGINT,
-  `user_id` INT DEFAULT NULL,
+    `place` VARCHAR(255) NOT NULL,
+    `user_id` INT DEFAULT NULL,
 	PRIMARY KEY (`id`)
 ) ENGINE = InnoDB;
 
