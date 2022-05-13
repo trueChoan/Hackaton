@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use App\Model\UserManager;
-use App\Model\PhoneManager;
 use App\Controller\AbstractController;
 
 class UserController extends AbstractController
@@ -73,39 +72,5 @@ class UserController extends AbstractController
         unset($_SESSION['user']);
         // puis on le redirige sur une autre page (page d'accueil ici)
         header('Location: /');
-    }
-
-    public function donate()
-    {
-
-        $errors = [];
-
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $credentials = array_map('trim', $_POST);
-            if (empty($credentials["brand"])) {
-                $errors[] = "La marque doit être renseignée";
-            }
-            if (empty($credentials["model"])) {
-                $errors[] = "Le modèle doit être renseigné";
-            }
-            if (empty($credentials["place"])) {
-                $errors[] = "Le lieu de récupération est obligatoire";
-            }
-            // if (empty($credentials["description"])) {
-            //     $errors[] = "Merci de renseigner une déscription";
-            // }
-            // if (strlen($credentials['description']) < 20) {
-            //     $errors['password'] = "Merci de faire une déscription exhaustive";
-            // }
-            if (empty($errors)) {
-                
-                $phoneManager = new PhoneManager();
-                $phoneManager->insertPhone($credentials);
-                return $this->login("/");
-            }
-        }
-        return $this->twig->render('Service/donation.html.twig', [
-            'errors' => $errors,
-        ]);
     }
 }

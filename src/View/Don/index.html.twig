@@ -15,34 +15,28 @@
 			<h2 class="mb-4 p-3 bg-green">
 				Les telephones
 			</h2>
-			<div
-				class="row g-5 mb-4">
-				{# {% for phone in phones %} #}
-				<div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-					<div class="card border-0 shadow h-100">
-						<div class="card-header bg-white">
-							<img class="card-logo-company" src="/uploads/phone/{{phone.logo}}" alt="">
-						</div>
-						<h1 class="card-title text-center text-primary h5 p-2 w-100">
-							{{ phone.model }}
-						</h1>
-						<div class="row g-0 h-100">
-							<div class="col-md-5 p-2">
-								<img src="/uploads/{{ phone.picture }}" class="img-fluid h-100 mx-auto d-block" alt="{{ phone.model }}"/>
-							</div>
-							<div class="col">
-								<div class="card-body h-100">
 
-									<div class="card-text mb-2">
-										{{phone.summary|raw}}
-									</div>
-									<a class="btn btn-primary" href="/phone/show?id={{phone.id}}">show</a>
-								</div>
+			<div class="row g-5 mb-4">
+				{% for phone in phones %}
+					<div class="col m-5 ">
+						<div class="card mx-auto border-0 shadow" style="width: 18rem;">
+							<h6 class="card-title">Publié le
+								{{phone.created_at}}</h6>
+							<img src="https://fdn2.gsmarena.com/vv/bigpic/huawei-p20-lite-.jpg" class=" img-thumbnail" alt="...">
+							<div class="card-body">
+								<h5 class="card-title text-center">{{phone.brand}}
+									{{phone.model}}</h5>
+								<p class="card-text text-center">{{phone.description}}</p>
+							</div>
+							<h6 class="card-title mx-4">Lieu :
+								{{phone.place}}</h6>
+							<div class="card-body text-center">
+								<a href="/phone/show?id={{phone.id}}" class="btn btn-primary card-link">Voir l'annonce</a>
 							</div>
 						</div>
 					</div>
-				</div>
-				{# {% endfor %} #}
+
+				{% endfor %}
 			</div>
 		</section>
 
