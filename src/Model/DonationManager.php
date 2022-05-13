@@ -21,4 +21,12 @@ class DonationManager extends AbstractManager
         $statement->execute();
         return (int)$this->pdo->lastInsertId();
     }
+
+    public function selectByPlace($ville): array
+    {
+        $query = 'SELECT * FROM ' . static::TABLE . " WHERE place='$ville'";
+
+
+        return $this->pdo->query($query)->fetchAll();
+    }
 }

@@ -2,17 +2,20 @@
 {% block content %}
 
 	<div class="container mt-4">
-		<div class="container text-center">
-			<h1 class="text-center mb-4">
-				Explore
-			</h1>
+		<h1 class="text-center mb-4">
+			Explore
+		</h1>
+		<div class="container text-center d-flex flex-column align-items-center">
+			<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1ltOfn9Der4zW6GiNu8cxgRVHd-W5YpR1&ehbc=2E312F" width="640" height="480"></iframe>
 			{% if user %}
-				<a href="/telephone/add" class="btn  btn-success mb-2">
+				<a href="/telephone/add" class="btn mt-4 btn-success mb-2">
 					<i class="bi bi-plus-lg"></i>
 					ajoute un telephone
 				</a>
-			</div>
-		{% endif %}
+
+			{% endif %}
+		</div>
+
 		<div class="form-group mt-5">
 			<label for="input-datalist">Rechercher dans les téléphones disponibles</label>
 			<input type="text" class="form-control" placeholder="Apple" list="list-phone" id="input-datalist">
@@ -58,6 +61,10 @@
 					{% endfor %}
 
 				</div>
+				<a href="/telephone/fullList" class="btn mt-4 btn-success mb-2">
+					<i class="bi bi-plus-lg"></i>
+					voir tout
+				</a>
 			</div>
 		</section>
 
