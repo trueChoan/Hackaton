@@ -50,7 +50,7 @@ class DonController extends AbstractController
                 $phoneManager->insertPhone($credentials, $_SESSION['user']['id']);
                 header('location: /dons');
             }
-            if (empty($errors) && !$isFunctionnal) {
+            if (empty($errors) && $isFunctionnal == false) {
                 header('location: /partenaires');
             }
         }
