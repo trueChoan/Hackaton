@@ -29,12 +29,12 @@ class DonController extends AbstractController
             if (empty($credentials["place"])) {
                 $errors[] = "Le lieu de récupération est obligatoire";
             }
-            // if (empty($credentials["description"])) {
-            //     $errors[] = "Merci de renseigner une déscription";
-            // }
-            // if (strlen($credentials['description']) < 20) {
-            //     $errors['password'] = "Merci de faire une déscription exhaustive";
-            // }
+            if (empty($credentials["description"])) {
+                $errors[] = "Merci de renseigner une déscription";
+            }
+            if (strlen($credentials['description']) < 20) {
+                $errors['password'] = "Merci de faire une déscription exhaustive";
+            }
             if (empty($errors)) {
                 $phoneManager = new DonationManager();
                 $phoneManager->insertPhone($credentials, $_SESSION['user']['id']);
