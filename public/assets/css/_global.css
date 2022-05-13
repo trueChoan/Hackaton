@@ -22,3 +22,7 @@ a {
     color: white;
 }
 
+.descbiomob{
+    color:var(--bg-secondary-rgb)
+}
+
