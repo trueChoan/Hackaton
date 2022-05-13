@@ -10,6 +10,7 @@ return [
     '' => ['HomeController', 'index',],
     'dons' => ['DonController', 'index',],
     'mentions' => ['MentionsController', 'index',],
+    'partenaires' => ['PartenairesController', 'index',],
     'login' => ['UserController', 'login',],
     'register' => ['UserController', 'register',],
     'logout' => ['UserController', 'logout',],
