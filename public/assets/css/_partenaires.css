@@ -1,0 +1,19 @@
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.card-img, .card-img-top {
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+    width: 280px;
+    height: 280px;
+    align-self: center;
+    object-fit: contain;
+}
+
+.img-recycle {
+    width: 150px;
+    display: flex;
+}
+
