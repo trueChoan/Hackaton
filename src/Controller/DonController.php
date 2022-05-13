@@ -15,12 +15,21 @@ class DonController extends AbstractController
         ]);
     }
 
+    public function alldon(): string
+    {
+        $donationManager = new DonationManager();
+        $phones = $donationManager->selectAll();
+        return $this->twig->render('Donation/index.html.twig', [
+            'phones' => $phones,
+        ]);
+    }
+
     public function donate()
     {
         $errors = [];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $credentials = array_map('trim', $_POST);
-            $isFunctionnal =  $credentials['is_functional'] ?? null;
+            $isFunctionnal =  $credentials['isfunc'] ?? null;
             if (empty($credentials["brand"])) {
                 $errors[] = "La marque doit être renseignée";
             }

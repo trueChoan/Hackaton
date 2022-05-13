@@ -1,49 +1,58 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-0">
 
 	<img src="/assets/images/logo.png" alt="" class=" logoimg d-inline-block align-text-top fs-4 " style="color:var(--bg-secondary-rgb)">
-			
-		<a class="navbar-brand col-2 -me fs-4" href=" /">Bio'Mob</a>
-			
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
 
-		<div class="collapse navbar-collapse  col-7 " id="navbarSupportedContent">
+	<a class="navbar-brand col-2 -me fs-4" href=" /">Bio'Mob</a>
 
-			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-				<li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="/">Home</a>
-				</li>
-				<li class="nav-item">
+	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse  col-7 " id="navbarSupportedContent">
+
+		<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+			<li class="nav-item">
+				<a class="nav-link active" aria-current="page" href="/">Home</a>
+			</li>
+
+			<li class="nav-item">
+				{% if user %}
 					<a class="nav-link" href="/dons">Les Dons</a>
-				</li>
-			</ul>
-			{% if user %}
-				<div class="nav-item dropdown col-2">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
-						Bienvenue
-						{{user.prenom}}
-					</a>
-					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<li>
-							<a class="dropdown-item" href="/logout">Deconnexion</a>
-						</li>
-					{% else %}
-						<div class="nav-item dropdown col-2">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-								Mon compte
-							</a>
-							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<li>
-									<a class="dropdown-item" href="/register">Inscription</a>
-								</li>
-								<li><hr class="dropdown-divider"></li>
-								<li>
-									<a class="dropdown-item" href="/login">Connexion</a>
-								</li>
-							{% endif %}
-						</ul>
-					</div>
+
+				{% else %}
+					<a class="nav-link" href="/login">Les Dons</a>
+				{% endif %}
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/donation">Tous les dons</a>
+			</li>
+		</ul>
+		{% if user %}
+			<div class="nav-item dropdown col-2">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+					Bienvenue
+					{{user.prenom}}
+				</a>
+				<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<li>
+						<a class="dropdown-item" href="/logout">Deconnexion</a>
+					</li>
+				{% else %}
+					<div class="nav-item dropdown col-2">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Mon compte
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li>
+								<a class="dropdown-item" href="/register">Inscription</a>
+							</li>
+							<li><hr class="dropdown-divider"></li>
+							<li>
+								<a class="dropdown-item" href="/login">Connexion</a>
+							</li>
+						{% endif %}
+					</ul>
 				</div>
 			</div>
-		</nav>
+		</div>
+	</nav>
