@@ -12,6 +12,23 @@
 				</a>
 			</div>
 		{% endif %}
+		<div class="form-group mt-5">
+			<label for="input-datalist">Rechercher dans les téléphones disponibles</label>
+			<input type="text" class="form-control" placeholder="Apple" list="list-phone" id="input-datalist">
+			<datalist id="list-phone">
+				<option>Apple</option>
+				<option>Google phone</option>
+				<option>Honor</option>
+				<option>Huawei</option>
+				<option>LG</option>
+				<option>Motorolla</option>
+				<option>Nokia</option>
+				<option>Oppo</option>
+				<option>Samsung</option>
+				<option>Wiko</option>
+				<option>Xiaomi</option>
+			</datalist>
+		</div>
 		<section>
 			<h2 class="mb-4 p-3">
 				Les telephones
@@ -45,4 +62,9 @@
 
 
 	</div>
+	<script>
+		document.addEventListener('DOMContentLoaded', e => {
+$('#input-datalist').autocomplete()
+}, false);
+	</script>
 {% endblock %}
