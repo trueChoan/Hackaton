@@ -28,3 +28,8 @@ a {
     background-color: rgb(175, 222, 176);
     border-color: rgb(175, 222, 176);
 }
+
+.btn {
+    background-color: var(--bg-secondary-rgb);
+    color: white;
+}
