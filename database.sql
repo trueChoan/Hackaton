@@ -63,19 +63,18 @@ ALTER TABLE `item`
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
 CREATE TABLE `user` (
-	`id` INT NOT NULL AUTO_INCREMENT,
-	`pseudo` VARCHAR(255) NOT NULL,
-	`email` VARCHAR(255) NOT NULL,
-	`password` VARCHAR(255) NOT NULL,
-  `firstname` VARCHAR(255) NOT NULL,
-  `lastname` VARCHAR(255) NOT NULL,
-  `adress` VARCHAR(255) NOT NULL,
-  `zipcode` INT NOT NULL,
-  `city` VARCHAR(255) NOT NULL,
-  `phonenumber` INT NOT NULL,
-	PRIMARY KEY (`id`)
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nom` varchar(80) NOT NULL,
+  `prenom` varchar(80) NOT NULL,
+  `adresse` varchar(80) NOT NULL,
+    `pseudo` varchar(80) NOT NULL,
+  `ville` varchar(80) NOT NULL,
+  `cp` int NOT NULL,
+  `tel` int NOT NULL,
+  `email` VARCHAR(100) NOT NULL,
+  `password` VARCHAR(255) NOT NULL,
+  PRIMARY KEY(`id`)
 ) ENGINE = InnoDB;
-
 
 CREATE TABLE `donation` (
 	`id` INT NOT NULL AUTO_INCREMENT,

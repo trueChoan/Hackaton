@@ -11,6 +11,7 @@ return [
     'login' => ['UserController', 'login',],
     'register' => ['UserController', 'register',],
     'logout' => ['UserController', 'logout',],
+    'donation' => ['DonationController', 'index',],
     'items' => ['ItemController', 'index',],
     'items/edit' => ['ItemController', 'edit', ['id']],
     'items/show' => ['ItemController', 'show', ['id']],
