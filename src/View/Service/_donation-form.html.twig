@@ -1,0 +1,48 @@
+<h1>
+	Donner votre vieux téléphone
+</h1>
+<form action="" id="form-donation-page" method="post">
+	<div class="mb-3">
+		<label for="brand" class="form-label">
+			Marque
+		</label>
+		<input class="form-control" type="text" id="brand" name="brand"></div>
+
+	<div class="mb-3">
+		<label for="model" class="form-label">
+			Modèle
+		</label>
+		<input class="form-control" type="text" id="model" name="model"></div>
+
+	<div class="mb-3">
+		<label for="place" class="form-label">
+			Lieu du téléphone
+		</label>
+		<input class="form-control" type="text" id="place" name="place"></div>
+	<h4 class="mb-3">Etat du téléphone</h4>
+	<div class="form-check mb-2">
+		<input class="form-check-input" type="radio" name="isfunc" id="isfunc">
+		<label class="form-check-label" for="isfunc">
+			Très bon
+		</label>
+	</div>
+	<div class="form-check mb-2">
+		<input class="form-check-input" type="radio" name="isfunc" id="isfunc" checked>
+		<label class="form-check-label" for="isfunc">
+			Satisfaisant
+		</label>
+	</div>
+	<div class="form-check mb-3">
+		<input class="form-check-input" type="radio" name="isfunc" id="isfunc">
+		<label class="form-check-label" for="isfunc">
+			Mort
+		</label>
+	</div>
+	<div class="mb-3">
+		<label for="description" class="form-label">Décrivez le téléphone et ses accéssoires</label>
+		<textarea class="form-control" id="description" name="description"rows="3"></textarea>
+	</div>
+	<button type="submit" form="form-donation-page" class="btn btn-success">
+		Valider
+	</button>
+</form>

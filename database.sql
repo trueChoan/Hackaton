@@ -83,11 +83,12 @@ CREATE TABLE `donation` (
 	`description` TEXT NOT NULL,
 	`created_at` DATETIME,
 	`is_functional` BIGINT,
-  `user_id` INT DEFAULT NULL,
+    `place` VARCHAR(255) NOT NULL,
+    `user_id` INT DEFAULT NULL,
 	PRIMARY KEY (`id`)
 ) ENGINE = InnoDB;
 
-ALTER TABLE `donation` ADD CONSTRAINT `fk_donation_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE `donation` ADD CONSTRAINT `fk_donation_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE Cascade ON UPDATE NO ACTION;
 
 
 SET FOREIGN_KEY_CHECKS = 0;

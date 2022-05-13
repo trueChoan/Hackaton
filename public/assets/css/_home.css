@@ -1,3 +1,8 @@
 .bg-green {
     background-color: rgb(175, 222, 176);
 }
+
+.phone>img {
+    width: 70%;
+    text-align: center;
+}
