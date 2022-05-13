@@ -3,15 +3,15 @@
 	<div class="container mt-4">
 		<div class="container text-center">
 			<h1 class="text-center mb-4">
-				Explore
+				Donner un téléphone
 			</h1>
 			{% if user %}
-				<a href="/telephone/add" class="btn  btn-success mb-2">
+				<a href="/telephone/add" class="btn mb-2">
 					<i class="bi bi-plus-lg"></i>
 					ajoute un telephone
 				</a>
-			</div>
-		{% endif %}
+			{% endif %}
+		</div>
 		<div class="form-group mt-5">
 			<label for="input-datalist">Rechercher dans les téléphones disponibles</label>
 			<input type="text" class="form-control" placeholder="Apple" list="list-phone" id="input-datalist">
@@ -30,8 +30,8 @@
 			</datalist>
 		</div>
 		<section>
-			<h2 class="mb-4 p-3">
-				Les telephones
+			<h2 class="mb-4 mt-4 p-3 text-center">
+				Explorer les telephones disponibles
 			</h2>
 
 			<div class="container">
@@ -50,7 +50,7 @@
 								<h6 class="card-title mx-4">Lieu :
 									{{phone.place}}</h6>
 								<div class="card-body text-center">
-									<a href="/phone/show?id={{phone.id}}" class="btn btn-primary card-link">Voir l'annonce</a>
+									<a href="/phone/show?id={{phone.id}}" class="btn card-link">Voir l'annonce</a>
 								</div>
 							</div>
 						</div>

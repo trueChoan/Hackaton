@@ -16,3 +16,9 @@ a {
     color: var(--bg-secondary-rgb);
     text-decoration: none;
 }
+
+.btn {
+    background-color:var(--bg-secondary-rgb);
+    color: white;
+}
+
