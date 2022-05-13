@@ -16,3 +16,20 @@ a {
     color: var(--bg-secondary-rgb);
     text-decoration: none;
 }
+
+.btn-success {
+    color: #fff;
+    background-color: rgb(175, 222, 176);
+    border-color: rgb(175, 222, 176);
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: rgb(175, 222, 176);
+    border-color: rgb(175, 222, 176);
+}
+
+.btn {
+    background-color: var(--bg-secondary-rgb);
+    color: white;
+}
