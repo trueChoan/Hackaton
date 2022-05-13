@@ -31,7 +31,7 @@ class UserController extends AbstractController
                 $errors[] = "Mot de passe non valide";
             }
         }
-        return $this->twig->render('user/login.html.twig', [
+        return $this->twig->render('User/login.html.twig', [
             'errors' => $errors
         ]);
     }
