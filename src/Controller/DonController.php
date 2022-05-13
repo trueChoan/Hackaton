@@ -20,7 +20,7 @@ class DonController extends AbstractController
         $errors = [];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $credentials = array_map('trim', $_POST);
-            $is_functionnal =  $credentials['is_functional'] ?? null;
+            $isFunctionnal =  $credentials['is_functional'] ?? null;
             if (empty($credentials["brand"])) {
                 $errors[] = "La marque doit être renseignée";
             }
@@ -36,12 +36,12 @@ class DonController extends AbstractController
             if (strlen($credentials['description']) < 20) {
                 $errors['password'] = "Merci de faire une déscription exhaustive";
             }
-            if (empty($errors) && $is_functionnal) {
+            if (empty($errors) && $isFunctionnal) {
                 $phoneManager = new DonationManager();
                 $phoneManager->insertPhone($credentials, $_SESSION['user']['id']);
                 header('location: /dons');
             }
-            if (empty($errors) && !$is_functionnal) {
+            if (empty($errors) && !$isFunctionnal) {
                 header('location: /partenaires');
             }
         }
