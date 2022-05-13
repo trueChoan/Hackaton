@@ -10,4 +10,8 @@
     /*White*/
     --background-primary: 255, 255, 255;
     --background-primary-rgb: rgb(var(--background-primary));
+
+    /*font*/
+    --bs-font-sans-serif: 'Raleway', sans-serif;
+    --bs-body-font-family: var(--bs-font-sans-serif);
 }

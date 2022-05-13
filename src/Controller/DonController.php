@@ -9,7 +9,7 @@ class DonController extends AbstractController
     public function index()
     {
         $donationManager = new DonationManager();
-        $phones = $donationManager->selectAll();
+        $phones = $donationManager->selectByPlace($_SESSION['user']['ville']);
         return $this->twig->render('Don/index.html.twig', [
             'phones' => $phones,
         ]);
@@ -20,6 +20,7 @@ class DonController extends AbstractController
         $errors = [];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $credentials = array_map('trim', $_POST);
+            $isFunctionnal =  $credentials['is_functional'] ?? null;
             if (empty($credentials["brand"])) {
                 $errors[] = "La marque doit être renseignée";
             }
@@ -35,10 +36,13 @@ class DonController extends AbstractController
             if (strlen($credentials['description']) < 20) {
                 $errors['password'] = "Merci de faire une déscription exhaustive";
             }
-            if (empty($errors)) {
+            if (empty($errors) && $isFunctionnal) {
                 $phoneManager = new DonationManager();
                 $phoneManager->insertPhone($credentials, $_SESSION['user']['id']);
                 header('location: /dons');
+            }
+            if (empty($errors) && !$isFunctionnal) {
+                header('location: /partenaires');
             }
         }
         return $this->twig->render('Service/donation.html.twig', [

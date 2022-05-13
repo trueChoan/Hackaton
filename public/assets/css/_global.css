@@ -17,12 +17,19 @@ a {
     text-decoration: none;
 }
 
+.btn-success {
+    color: #fff;
+    background-color: rgb(175, 222, 176);
+    border-color: rgb(175, 222, 176);
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: rgb(175, 222, 176);
+    border-color: rgb(175, 222, 176);
+}
+
 .btn {
-    background-color:var(--bg-secondary-rgb);
+    background-color: var(--bg-secondary-rgb);
     color: white;
 }
-
-.descbiomob{
-    color:var(--bg-secondary-rgb)
-}
-

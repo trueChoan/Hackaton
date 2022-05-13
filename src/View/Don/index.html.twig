@@ -1,15 +1,18 @@
 {% extends "layout.html.twig" %}
 {% block content %}
+
 	<div class="container mt-4">
-		<div class="container text-center">
-			<h1 class="text-center mb-4">
-				Donner un téléphone
-			</h1>
+		<h1 class="text-center mb-4">
+			Explorer les téléphones
+		</h1>
+		<div class="container text-center d-flex flex-column align-items-center">
+			<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1ltOfn9Der4zW6GiNu8cxgRVHd-W5YpR1&ehbc=2E312F" width="640" height="480"></iframe>
 			{% if user %}
-				<a href="/telephone/add" class="btn mb-2">
+				<a href="/telephone/add" class="btn mt-4 btn-success mb-2">
 					<i class="bi bi-plus-lg"></i>
 					ajoute un telephone
 				</a>
+
 			{% endif %}
 		</div>
 		<div class="form-group mt-5">
@@ -57,6 +60,10 @@
 					{% endfor %}
 
 				</div>
+				<a href="/telephone/fullList" class="btn mt-4 btn-success mb-2">
+					<i class="bi bi-plus-lg"></i>
+					voir tout
+				</a>
 			</div>
 		</section>
 
